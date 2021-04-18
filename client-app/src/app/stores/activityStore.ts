@@ -52,6 +52,17 @@ export default class ActivityStore {
     }
   }
 
+  get groupedActivities() {
+    return Object.entries(
+      this.activitiesByDate.reduce((activities, activity) => {
+        console.log(activities, 'activity')
+        const date = activity.date;
+        activities[date] = activities[date] ? [...activities[date], activity] : [activity]
+        return activities;
+      }, {} as {[key: string]: Activity[]})
+    )
+  }
+
   updateActivity = async(activity: Activity) => {
     this.loading = true;
     try {

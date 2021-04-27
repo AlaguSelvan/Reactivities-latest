@@ -30,9 +30,9 @@ function App() {
                 <Route exact path='/activities/:id' component={ActivityDetails} />
                 <Route key={location.key} exact path={['/createActivity', '/manage/:id']} component={ActivityForm} />
                 <Route path='/errors' component={TestErrors} />
-                <Route path='/server-error' component={ServerError} />
+                <Route exact path='/server-error' component={ServerError} />
               </Switch>
-              <Route component={NotFound} />
+              <Route path="/not-found" component={NotFound} />
             </Container>
           </>
         )}

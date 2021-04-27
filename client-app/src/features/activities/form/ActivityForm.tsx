@@ -44,7 +44,6 @@ const ActivityForm = () => {
   }, [id, loadActivity])
 
   function handleFormSubmit(e: Activity) {
-    debugger;
     if(activity.id.length === 0) {
       console.log('here')
       let newActivity = {

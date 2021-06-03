@@ -14,7 +14,7 @@ const ProfilePhotos: React.FC<Props> = ({profile}) => {
   const [addPhotoMode, setAddPhotoMode] = useState(false)
   const [target, setTarget] = useState('')
   function handlePhotoUpload(file: Blob) {
-    uploadPhoto(file).then(() =>setAddPhotoMode(true))
+    uploadPhoto(file).then(() =>setAddPhotoMode(false))
   }
 
   function handleSetMainPhoto(photo: Photo, e: SyntheticEvent<HTMLButtonElement>) {

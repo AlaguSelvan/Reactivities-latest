@@ -11,6 +11,10 @@ export default class UserStore {
     makeAutoObservable(this)
   }
 
+  setDisplayName(name: string) {
+    if (this.user) this.user.displayName = name;
+  }
+
   get isLoggedIn() {
     return !!this.user;
   }

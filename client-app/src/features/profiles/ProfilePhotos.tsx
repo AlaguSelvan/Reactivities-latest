@@ -54,7 +54,7 @@ const ProfilePhotos: React.FC<Props> = ({profile}) => {
                           content="Main"
                           name={photo.id}
                           disabled={photo.isMain}
-                          loading={target === photo.id && loading}
+                          loading={target === photo.id && uploading}
                           onClick={e => handleSetMainPhoto(photo, e)}
                           />
                         <Button

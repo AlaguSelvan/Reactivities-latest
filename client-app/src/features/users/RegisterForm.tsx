@@ -1,6 +1,6 @@
 import { ErrorMessage, Form, Formik } from "formik"
 import { observer } from "mobx-react-lite";
-import { Button, Header, Label } from "semantic-ui-react"
+import { Button, Header } from "semantic-ui-react"
 import MyTextInput from "../../app/common/form/MyTextInput"
 import { useStore } from "../../app/stores/store";
 import * as Yup from 'yup'
@@ -31,7 +31,6 @@ const LoginForm = () => {
           <ErrorMessage
             name='error'
             render={() => <ValidationErrors errors={errors.error}/>}
-            // render={() => <ValidationErrors errors={errors.error}/>}
           />
           <Button disabled={!isValid || !dirty || isSubmitting} loading={isSubmitting} positive content="Register" type="submit" fluid />
         </Form>

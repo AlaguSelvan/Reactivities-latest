@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -75,6 +76,7 @@ namespace API.Controllers
     {
       var user = await _userManager.Users.Include(p => p.Photos)
         .FirstOrDefaultAsync(x => x.Email == User.FindFirstValue(ClaimTypes.Email));
+      if (user == null) return Unauthorized();
       return CreatedUserObj(user);
     }
 

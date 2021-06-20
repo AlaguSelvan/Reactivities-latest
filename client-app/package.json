@@ -36,6 +36,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "move-file build ../API/wwwroot",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -62,6 +63,8 @@
     "@types/react-infinite-scroller": "^1.2.1",
     "@types/react-router-dom": "^5.1.7",
     "@types/uuid": "^8.3.0",
-    "@types/yup": "^0.29.11"
+    "@types/yup": "^0.29.11",
+    "move-file": "^2.1.0",
+    "move-file-cli": "^2.0.0"
   }
 }
